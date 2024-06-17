@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lâmpada</title>
+    <style>
+        body {
+            background-color: black;
+        }
+    </style>
+</head>
+<body>
+    <img src="img/lamp-off.png" id="lamp" width="188px"> <br> <br>
+    <button id="btn" onclick="acender()">Acender</button>
+    <script>
+        let lamp = document.querySelector("#lamp")
+        function acender() {
+                if (lamp.src.endsWith("lamp-off.png")) {
+                    lamp.src = "img/lamp-on.png";
+                    document.getElementById("btn").innerHTML = "Apagar";
+                    document.body.style.backgroundColor = "white"
+                } else {
+                    lamp.src = "img/lamp-off.png";
+                    document.getElementById("btn").innerHTML = "Acender";
+                    document.body.style.backgroundColor = "black"
+                }
+        }
+        
+    </script>
+</body>
+</html>

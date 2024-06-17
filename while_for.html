@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>While e For</title>
+</head>
+<body>
+    <p id="mostraaq"></p>
+    <script>
+        // Imprimir números pares até 100 com For
+        for ( i = 0; i <= 100; i++ ){
+            if ( i %2 == 0){
+                document.getElementById("mostraaq").innerHTML += i + "<br>"
+            } 
+        }
+        // Imprimir números pares até 100 com While
+        let i = 0
+        while ( i <= 100 ){
+            if ( i %2 == 0){
+                document.getElementById("mostraaq").innerHTML += i + "<br>"
+            } 
+            i++
+        }
+        // Imprimir números ímpares até 100 com For
+        for ( i = 0; i <= 100; i++ ){
+            if ( i %2!= 0){
+                document.getElementById("mostraaq").innerHTML += i + "<br>"
+            } 
+        }
+        // Imprimir números ímpares até 100 com While
+        let i = 0
+        while ( i <= 100 ){
+            if ( i %2!= 0){
+                document.getElementById("mostraaq").innerHTML += i + "<br>"
+            } 
+            i++
+        }
+        // Imprimir número em ordem descrescente com for
+        for ( i = 100; i >= 0; i-- ){
+            document.getElementById("mostraaq").innerHTML += i + "<br>"
+        }
+        // Imprimir número em ordem descrescente com while
+        let i = 100
+        while ( i >= 0 ){
+            document.getElementById("mostraaq").innerHTML += i + "<br>"
+            i--
+        }
+        // Imprimir número em ordem crescente com for
+        for ( i = 0; i <= 100; i++ ){
+            document.getElementById("mostraaq").innerHTML += i + "<br>"
+        }
+        // Imprimir número em ordem crescente com while
+        let i = 0
+        while ( i <= 100 ){
+            document.getElementById("mostraaq").innerHTML += i + "<br>"
+            i++
+        }
+    </script>
+</body>
+</html>

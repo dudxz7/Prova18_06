@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verificador de senhas Hiper mega blaster seguro </title>
+</head>
+<body>
+    <h1>Criar conta no INSS</h1>
+    <label for="senha">Senha:</label>
+    <input type="password" id="senha" placeholder="digite sua senha aqui" required> 
+    <button onclick="verificar()">Verificar</button>
+    <p id="mostraaq"></p>
+    <script>
+        function verificar(){
+            let senha = document.querySelector("#senha").value
+            let msg = ''
+            let senha_certa = "senhamtfoda"
+            if (senha == senha_certa) {
+                msg = "Senha correta"
+            } else {
+                msg = "Senha incorreta"
+            }
+            document.querySelector("#mostraaq").innerHTML = msg
+        }
+    </script>
+</body>
+</html>

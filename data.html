@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Idade através do ano atual</title>
+</head>
+<body>
+    <label for="nome">Nome:</label>
+    <input type="text" id="nome" placeholder="Digite o seu nome " required> <br>
+    <label for="nascimento">Nascimento:</label> 
+    <input type="text" id="nascimento" placeholder="Digite o ano em que você nasceu" required> <br> <br>
+    <button onclick="enviar()">Enviar</button>
+    <p id="mostraraq"></p>
+    <script>
+        function enviar(){
+            let nome = document.querySelector("#nome").value
+            let nascimento = +document.querySelector("#nascimento").value
+            let data = new Date().getFullYear()
+            let idade = data - nascimento
+            let msg = `Olá ${nome}, você tem ${idade} anos`
+            document.querySelector("#mostraraq").innerHTML = msg
+        }
+    </script>
+</body>
+</html>

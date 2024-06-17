@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Imc</title>
+</head>
+<body>
+    <label for="peso">Peso:</label>
+    <input type="text" id="peso" placeholder="Digite seu peso aqui" required> <br> 
+    <label for="altura">Altura:</label>
+    <input type="text" id="altura" placeholder="Digite sua altura aqui" required> <br> <br>
+    <button onclick="calcular()">Calcular</button>
+    <p id="mostraraq"></p>
+    <script>
+        function calcular(){
+            let altura = +document.querySelector("#altura").value // pode usar querySelector ou GetElementById
+            let peso = +document.querySelector("#peso").value // pode usar querySelector ou GetElementById
+            let imc = (peso/altura**2)
+            let descricao = ''
+
+            if (imc < 18.5) {
+                descricao =  "Cuidado! Você está abaixo do peso!"
+            }else if(imc >= 18.5 && imc < 25 ) {
+                descricao = "Você está no peso ideal!"
+            }else if(imc >=25 && imc < 30){
+                descricao = "Cuidado! Você está com sobrepeso"
+            } else if(imc >= 30 && imc < 35){
+                descricao = "Cuidado! Você está com obesidade grau I"
+            } else if(imc >= 35 && imc < 40){
+                descricao = "Cuidado! Você está com obesidade grau II"
+            }else{
+                descricao = "Cuidado! Você está com obesidade grau III"
+            }
+            document.querySelector("#mostraraq").innerHTML = 'seu imc é de ' + imc + '<br>' + descricao
+        }
+    </script>
+</body>
+</html>
